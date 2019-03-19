@@ -11,7 +11,7 @@
 **featureData.mat**：上述save下来的结构体变量
 
 **bayesClassifierBulid.m**：构造贝叶斯分类器，并返回label。具体原理可参考[CSDN博客](https://blog.csdn.net/weixin_39758398/article/details/86597147)的分类器设计部分。
-**interface.m与interface.fig**：GUI文件。下面是GUI的界面：![GUI界面](https://github.com/GYee/Matlab-HandWriting_Number_Recognition/raw/master/GUI界面.png)
+**interface.m与interface.fig**：GUI文件。下面是GUI的界面：<div align=center><img width="300" height="300" src="https://github.com/GYee/Matlab-HandWriting_Number_Recognition/raw/master/GUI界面.png"/></div>
 ## 使用方法
 将所有files下载放到同一个目录下，打开interface.m文件运行，会跳出一个GUI界面，然后在手写板上用鼠标写0-9其中一个数字，点击“确认”按钮即可。当想再次输入另外一个数字时，请先点击“清除”按钮。
 
