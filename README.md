@@ -12,6 +12,7 @@
 
 **bayesClassifierBulid.m**：构造贝叶斯分类器，并返回label。具体原理可参考[CSDN博客](https://blog.csdn.net/weixin_39758398/article/details/86597147)的分类器设计部分。
 **interface.m与interface.fig**：GUI文件。下面是GUI的界面：<div align=center><img width="500" height="500" src="https://github.com/GYee/Matlab-HandWriting_Number_Recognition/raw/master/GUI界面.png"/></div>
+**Acc1.rar**:（请下载解压缩后再看本段后面的文字）压缩包中挺多文件的，其主要的功能是实现基于定义的类条件概率密度函数构造的贝叶斯分类器的准确度测试。训练和测试样本集来自于opencv库自带的一张digits.png图片，图片里面是5000个手写数字，每个类别500个，每个数字占用的空间是20乘以20pixels.所以里面的digits_segmentation.m文件就是用来切割digits.png图片并保存的，接着将切割下来的图片按照类别分别放到不同的文件夹中，最后从每个类别中随机挑选出100张图作为测试集，剩下的全部作为训练集。这些图片的特征提取方法跟上面讲述的一样，feature_struct_build.m文件就是用来生成训练集和测试集的特征数据的，并保存为两个mat文件，最后打开Acc_test.m文件调用这两个mat文件进行准确地测试，可得准确率80.1%。对于这样简单的分类器来说，这样的准确度还算可以接受了，当然你要想用自己的图片集来测试准确度也可以，方法是：打开feature_struct_build.m文件，修改文件路径为你图片集所在的路径，生成对应的特征数据并保存为mat文件，最后运行Acc_test.m即可。
 ## 使用方法
 将所有files下载放到同一个目录下，打开interface.m文件运行，会跳出一个GUI界面，然后在手写板上用鼠标写0-9其中一个数字，点击“确认”按钮即可。当想再次输入另外一个数字时，请先点击“清除”按钮。
 
